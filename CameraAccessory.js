@@ -8,7 +8,7 @@ module.exports = (hap, Accessory, log) => class CameraAccessory extends Accessor
     var id = conf.id || name
     var uuid = hap.uuid.generate('homebridge-image-to-camera:' + id)
 
-    log('setup camera accessory', JSON.stringify(hap.Accessory.Categories))
+    //log('setup camera accessory', JSON.stringify(hap.Accessory.Categories))
     super(name, uuid, hap.Accessory.Categories.CAMERA)
     log('setup camera accessory')
 

@@ -7,7 +7,9 @@ function CameraSource (hap, conf, log) {
   this.hap = hap
   this.conf = conf
   this.log = log
+
   this.services = []
+  this.streamControllers = []
 
   const options = {
     proxy: false, // Requires RTP/RTCP MUX Proxy
@@ -106,9 +108,9 @@ CameraSource.prototype.handleCloseConnection = function (connectionID) {
 CameraSource.prototype._createStreamControllers = function (maxStreams, options) {
   this.log('CameraSource _createStreamControllers', this.conf)
 
-  const self = this
+  let self = this
   for (let i = 0; i < maxStreams; i += 1) {
-    const streamController = new this.hap.StreamController(i, options, self)
+    var streamController = new this.hap.StreamController(i, options, self)
     self.services.push(streamController.service)
     self.streamControllers.push(streamController)
   }

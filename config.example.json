@@ -11,10 +11,10 @@
   "platforms": [
     {
       "platform": "image-camera",
-      "cameras": [
+      "images": [
         {
           "name": "Image 1",
-          "url": "/tmp/image1.png"
+          "path": "/home/pi/image1.jpg"
         }
       ]
     }

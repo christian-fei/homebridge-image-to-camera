@@ -19,10 +19,10 @@ Update your config similar to this:
  "platforms": [
       {
          "platform": "image-camera",
-         "cameras": [
+         "images": [
             {
                "name": "Image 1",
-               "path": "/path/to/image"
+               "path": "/path/to/image.jpg"
             }
          ]
       }
@@ -38,7 +38,7 @@ Take a look at the <a href="config.example.json">example config.json</a>
 Fields:
 
 * `name` name of the camera (required)
-* `path` the path of the image (required)
+* `path` the local path of the image (required)
 
 # Usage
 
@@ -47,3 +47,5 @@ In some cases, the camera is not visible in Home-App:
 * Press `Add device`
 * Press `Code missing`
 * Select Camera
+
+Please note that the image will only be displayed as the camera preview. Image stream is not supported.
